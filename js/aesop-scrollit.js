@@ -15,32 +15,28 @@
 
 		$this.imagesLoaded( function() {
 
-			console.log('ready')
-			console.log( wHeight )
+			var cHeight = wHeight + 200
 
-			// set the height of teh container to that of the window
 			$this.css({
-				'height': wHeight
+				'height': cHeight
 			})
 			.find('.aesop-scrollit--content').css({
-				'height': wHeight - 100,
+				'height': cHeight - 100,
 				'position': 'relative',
 				'top'	: 50
 			})
 
-			var watch = scrollMonitor.create( $this, {top:-wHeight} );
+			var watch 	= scrollMonitor.create( $this, { top:-wHeight } )
+			,	img 	= $this.find('.aesop-scrollit--img')
 
 			watch.enterViewport(function() {
-			    console.log( 'I have entered the viewport' );
+
 			    addClass()
+
 			});
 
-
-        	// Save a reference to the element
-        	var img = $this.find('.aesop-scrollit--img')
-
         	img.css({
-				'height': wHeight + 200
+				'height': wHeight + 400
 			})
 
 			$this.find('.aesop-scrollit--content').scroll( function() {

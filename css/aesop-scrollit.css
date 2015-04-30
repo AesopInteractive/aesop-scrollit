@@ -23,7 +23,7 @@
 .aesop-scrollit--img {
 	position: absolute;
 	left:0;
-	top:0;
+	top:-100px;
 	width:100%;
 	height:100%;
 	z-index:0;
@@ -35,6 +35,7 @@
 .aesop-scrollit--covered  {
 	overflow: hidden;
 }
+
 .aesop-scrollit--covered .aesop-scrollit--content {
 	overflow: scroll;
 }
@@ -47,4 +48,5 @@
 	width:100%;
 	height:100%;
 	z-index:1;
+	margin:0 auto;
 }

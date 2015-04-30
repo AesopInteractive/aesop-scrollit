@@ -1,0 +1,50 @@
+.aesop-scrollit {
+	height:900px;
+	position:relative;
+}
+
+.aesop-scrollit--content {
+	position:relative;
+	z-index:1;
+	color:white;
+	overflow:hidden;
+}
+.aesop-scrollit--content span {
+	max-width: 350px;
+	display: block;
+}
+.aesop-scrollit--align-left {
+	padding-left:70px;
+}
+.aesop-scrollit--align-right {
+	padding-right:70px;
+}
+.aesop-scrollit--img {
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:0;
+	background-position:center center;
+	background-size:cover;
+	transition:all .25s linear;
+}
+
+/** Covered **/
+.aesop-scrollit--covered  {
+	overflow: hidden;
+}
+.aesop-scrollit--covered .aesop-scrollit--content {
+	overflow: scroll;
+}
+.aesop-scrollit--covered .aesop-scrollit {
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+}

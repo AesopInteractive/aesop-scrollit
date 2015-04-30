@@ -31,7 +31,7 @@ class aesopScrollitSC {
 		// account for multiple instances of this component
 		static $instance = 0;
 		$instance++;
-		$unique = sprintf('scrollit-shortcode-%s-%s',get_the_ID(), $instance);
+		$unique = sprintf('aesop-scrollit-%s-%s',get_the_ID(), $instance);
 
 		// if lasso is active we need to map the sc atts as data-attributes
 		if ( function_exists( 'lasso_editor_components' ) ) {
